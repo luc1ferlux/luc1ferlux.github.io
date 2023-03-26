@@ -509,7 +509,7 @@
 <p>Bob发送其公钥给Alice。</p>
 <p>则Alice如下计算（PK2）SK1=(gβ)α=gαβ；Bob如下计算(PK1）SK2=(gα)β=gαβ公共密钥。</p>
 <p>因此Alice与Bob计算出相同的<strong>公共密钥</strong>Key=gαβ，或Key=Hash(gαβ)</p>
-<p><img src="/.io//0deec089a19bea414b406ec184c4126257ede0f9.png" alt="1"></p>
+<p><img src="0deec089a19bea414b406ec184c4126257ede0f9.png" alt="1"></p>
 <p>用会话密钥使用对称加密算法，对数据加密和解密<br><strong>举例：</strong> 素数群，生成元，乘法群。<br>Alice私钥SK1= α=4,公钥PK1=gα=24mod11=5;<br>Bob私钥SK2= β=5,公钥PK2=gβ=25mod11=10;<br><strong>协议：</strong> Alice发送其公钥PK1=5给Bob；Bob发送其公钥PK2=10给Alice。<br>则Alice如下计算(PK2)SK1=104mod11=1；Bob如下计算<br>(PK1)SK2=55mod11=1<br><strong>等价于</strong> Alice，计算Key=(25)4mod11=1，Bob计算(24)5mod11=1</p>
 <p>因此Alice与Bob计算出相同的<strong>会话密钥</strong>Key=gαβ=24<em>5=1，<br>或Key=Hash(gαβ)=SHA256(24x5mod11) =SHA 256(1)<br><strong>但是，有</strong> <strong>2</strong> <em>*个缺点：</em></em></p>
 <p><strong>缺点</strong> <strong>1</strong> <strong>：公共密钥永远没变化</strong></p>
@@ -517,27 +517,27 @@
 <p><strong>第一天：</strong> <strong>m1</strong>， r1=100，r2=100</p>
 <p><strong>第一天：</strong> <strong>m1</strong>，r1=200，r2=200</p>
 <p><strong>缺点</strong> <strong>2</strong> <strong>：中间人攻击</strong><br>Adversary私钥SKA=ω，公钥PKA=gω<br><strong>理想情况</strong>：Alice发送其公钥PK1给Bob；Bob发送其公钥PK2给Alice；</p>
-<p><img src="/.io//fe5a4ae6b63903fa2db18739194f240b7fce2405.png" alt="2"></p>
+<p><img src="fe5a4ae6b63903fa2db18739194f240b7fce2405.png" alt="2"></p>
 <p><strong>实际情况：</strong> Alice发送其公钥PK1给Adversary，Adversary发送其公钥PKA给Bob。<br>Bob发送其公钥PK2给Adversary，Adversary发送其公钥PKA给Alice</p>
-<p>则Alice计算出与Adversary的会话密钥<br><img src="/.io//89cb0da83f6f06a9b2d4e865ac00e0e9d913c807.png" alt="3"><br>Adversary计算出与Alice的会话密钥<br><img src="/.io//765bf85e807b3f9f676774cab8db04b7e3844da5.png" alt="4"><br>则Bob计算出与Adversary的会话密钥<br><img src="/.io//2b5d049b3011acb6bd5206dced7c60739221cb23.png" alt="5"><br>Adversary计算出与Bob的会话密钥<br><img src="/.io//b21fbc1465087bab53f551ed19bd7e0bf725b917.png" alt="6"><br><strong>添加随机数不能解决中间人攻击</strong><br><img src="/.io//2a247752ade8a977c009d2626cd51e795c05cd54.png" alt="7"></p>
-<h2 id="3-3-ElGamal加密"><a href="#3-3-ElGamal加密" class="headerlink" title="3.3 ElGamal加密"></a>3.3 ElGamal加密</h2><p><img src="/.io//e61f410824dadaec5a6aad09fea2229ac76b3095.png" alt="8"></p>
-<h2 id="3-4-椭圆曲线群"><a href="#3-4-椭圆曲线群" class="headerlink" title="3.4 椭圆曲线群"></a>3.4 椭圆曲线群</h2><p><img src="/.io//84fa8ecbddf7febe3fa82c06d7cc3b3a94896ff6.png" alt="9"></p>
-<p><img src="/.io//c4b07143501154ec77d51295f7dbba39d0d5aa88_2_417x500.png" alt="10"></p>
-<p><img src="/.io//9f19af436dffef70ec1b99d69d2011f2d3493f80_2_341x500.png" alt="11"></p>
-<p><img src="/.io//5196a0fd4e2617833d0cd72f9c4f515a66b63259_2_423x500.png" alt="12"></p>
-<h2 id="3-5-零知识证明"><a href="#3-5-零知识证明" class="headerlink" title="3.5 零知识证明"></a>3.5 零知识证明</h2><p><img src="/.io//8d1f44dbffad09ab901e6d4b531191dc11a0e5a0_2_382x499.png" alt="13"></p>
-<p><img src="/.io//bc3bc57b77e4a52d121469e0c7ec2dd4b560661b_2_371x500.png" alt="14"></p>
-<p><img src="/.io//c2b8046c859512a09b0c15b56b941c420a9a18cc.png" alt="15"></p>
-<h2 id="3-6-ElGamal同态加密"><a href="#3-6-ElGamal同态加密" class="headerlink" title="3.6 ElGamal同态加密"></a>3.6 ElGamal同态加密</h2><h3 id="3-6-1-密文同态运算原理"><a href="#3-6-1-密文同态运算原理" class="headerlink" title="3.6.1 密文同态运算原理"></a>3.6.1 密文同态运算原理</h3><p><img src="/.io//a833f95dd7868972c66826331881da3f73d7c86f.png" alt="16"></p>
-<p><img src="/.io//6b3fb7147adc8a9c0390899738a3ce3e2f5ac03c.png" alt="17"></p>
-<p><img src="/.io//610fa41278cf5b1b0bec3475ac68796a5a4882db.png" alt="18"></p>
-<h3 id="3-6-2-Sigma证明2个值相等"><a href="#3-6-2-Sigma证明2个值相等" class="headerlink" title="3.6.2 Sigma证明2个值相等"></a>3.6.2 Sigma证明2个值相等</h3><p><img src="/.io//67273270b3b761a572fdd0003fc0cd80530f434d.png" alt="19"></p>
-<p><img src="/.io//9efa616c7dc14183fb3166b4e7d4bc6b64537c06.png" alt="20"></p>
-<p><img src="/.io//054c48dff59aaf310b4cbdba83366e10b4643218.png" alt="21"></p>
-<p><img src="/.io//42c579fef6d50fb85c4f15c8aa9bff1261870a39.png" alt="22"></p>
-<h2 id="3-7-ElGamal-加密安全升级"><a href="#3-7-ElGamal-加密安全升级" class="headerlink" title="3.7 ElGamal 加密安全升级"></a>3.7 ElGamal 加密安全升级</h2><p><img src="/.io//b06b20873145394d26178ea8a7568a88c6801c65.png" alt="23"></p>
-<h2 id="3-8-ECIES加密"><a href="#3-8-ECIES加密" class="headerlink" title="3.8 ECIES加密"></a>3.8 ECIES加密</h2><p><img src="/.io//d315a6bbdf6f60bf76cdcd887321083caf55fe9e.png" alt="24"></p>
-<p><img src="/.io//2eb8d988cdf718a5b24162b8e39408f74f53b9c2_2_393x500.png" alt="25"></p>
+<p>则Alice计算出与Adversary的会话密钥<br><img src="89cb0da83f6f06a9b2d4e865ac00e0e9d913c807.png" alt="3"><br>Adversary计算出与Alice的会话密钥<br><img src="765bf85e807b3f9f676774cab8db04b7e3844da5.png" alt="4"><br>则Bob计算出与Adversary的会话密钥<br><img src="2b5d049b3011acb6bd5206dced7c60739221cb23.png" alt="5"><br>Adversary计算出与Bob的会话密钥<br><img src="b21fbc1465087bab53f551ed19bd7e0bf725b917.png" alt="6"><br><strong>添加随机数不能解决中间人攻击</strong><br><img src="2a247752ade8a977c009d2626cd51e795c05cd54.png" alt="7"></p>
+<h2 id="3-3-ElGamal加密"><a href="#3-3-ElGamal加密" class="headerlink" title="3.3 ElGamal加密"></a>3.3 ElGamal加密</h2><p><img src="e61f410824dadaec5a6aad09fea2229ac76b3095.png" alt="8"></p>
+<h2 id="3-4-椭圆曲线群"><a href="#3-4-椭圆曲线群" class="headerlink" title="3.4 椭圆曲线群"></a>3.4 椭圆曲线群</h2><p><img src="84fa8ecbddf7febe3fa82c06d7cc3b3a94896ff6.png" alt="9"></p>
+<p><img src="c4b07143501154ec77d51295f7dbba39d0d5aa88_2_417x500.png" alt="10"></p>
+<p><img src="9f19af436dffef70ec1b99d69d2011f2d3493f80_2_341x500.png" alt="11"></p>
+<p><img src="5196a0fd4e2617833d0cd72f9c4f515a66b63259_2_423x500.png" alt="12"></p>
+<h2 id="3-5-零知识证明"><a href="#3-5-零知识证明" class="headerlink" title="3.5 零知识证明"></a>3.5 零知识证明</h2><p><img src="8d1f44dbffad09ab901e6d4b531191dc11a0e5a0_2_382x499.png" alt="13"></p>
+<p><img src="bc3bc57b77e4a52d121469e0c7ec2dd4b560661b_2_371x500.png" alt="14"></p>
+<p><img src="c2b8046c859512a09b0c15b56b941c420a9a18cc.png" alt="15"></p>
+<h2 id="3-6-ElGamal同态加密"><a href="#3-6-ElGamal同态加密" class="headerlink" title="3.6 ElGamal同态加密"></a>3.6 ElGamal同态加密</h2><h3 id="3-6-1-密文同态运算原理"><a href="#3-6-1-密文同态运算原理" class="headerlink" title="3.6.1 密文同态运算原理"></a>3.6.1 密文同态运算原理</h3><p><img src="a833f95dd7868972c66826331881da3f73d7c86f.png" alt="16"></p>
+<p><img src="6b3fb7147adc8a9c0390899738a3ce3e2f5ac03c.png" alt="17"></p>
+<p><img src="610fa41278cf5b1b0bec3475ac68796a5a4882db.png" alt="18"></p>
+<h3 id="3-6-2-Sigma证明2个值相等"><a href="#3-6-2-Sigma证明2个值相等" class="headerlink" title="3.6.2 Sigma证明2个值相等"></a>3.6.2 Sigma证明2个值相等</h3><p><img src="67273270b3b761a572fdd0003fc0cd80530f434d.png" alt="19"></p>
+<p><img src="9efa616c7dc14183fb3166b4e7d4bc6b64537c06.png" alt="20"></p>
+<p><img src="054c48dff59aaf310b4cbdba83366e10b4643218.png" alt="21"></p>
+<p><img src="42c579fef6d50fb85c4f15c8aa9bff1261870a39.png" alt="22"></p>
+<h2 id="3-7-ElGamal-加密安全升级"><a href="#3-7-ElGamal-加密安全升级" class="headerlink" title="3.7 ElGamal 加密安全升级"></a>3.7 ElGamal 加密安全升级</h2><p><img src="b06b20873145394d26178ea8a7568a88c6801c65.png" alt="23"></p>
+<h2 id="3-8-ECIES加密"><a href="#3-8-ECIES加密" class="headerlink" title="3.8 ECIES加密"></a>3.8 ECIES加密</h2><p><img src="d315a6bbdf6f60bf76cdcd887321083caf55fe9e.png" alt="24"></p>
+<p><img src="2eb8d988cdf718a5b24162b8e39408f74f53b9c2_2_393x500.png" alt="25"></p>
 
                 
             </div>
