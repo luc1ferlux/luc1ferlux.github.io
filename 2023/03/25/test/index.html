@@ -4,9 +4,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="零知识证明, Lucifer_Blog">
-    <meta name="description" content="零知识证明
-https://www.bilibili.com/video/BV1Gb411R7dr/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=1c8b4d276f629">
+    <meta name="keywords" content="密码学03｜群和公钥加密, Lucifer_Blog">
+    <meta name="description" content="3 群与公钥加密3.1 群符号说明： a^b是指a的b次方；a_1 下划线表示下标；a*b是指a乘以b。
+介绍公钥密码算法之前先要介绍一个关键的数学工具：群。
+群定义： 一个集合G ，满足以下6个条件，则称为群。
+1. 非空集： 集合中至少">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -18,7 +20,7 @@ https://www.bilibili.com/video/BV1Gb411R7dr/?spm_id_from=333.337.search-card.all
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>零知识证明 | Lucifer_Blog</title>
+    <title>密码学03｜群和公钥加密 | Lucifer_Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -53,119 +55,7 @@ https://www.bilibili.com/video/BV1Gb411R7dr/?spm_id_from=333.337.search-card.all
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.2"><style>mjx-container[jax="SVG"] {
-  direction: ltr;
-}
-
-mjx-container[jax="SVG"] > svg {
-  overflow: visible;
-}
-
-mjx-container[jax="SVG"][display="true"] {
-  display: block;
-  text-align: center;
-  margin: 1em 0;
-}
-
-mjx-container[jax="SVG"][justify="left"] {
-  text-align: left;
-}
-
-mjx-container[jax="SVG"][justify="right"] {
-  text-align: right;
-}
-
-g[data-mml-node="merror"] > g {
-  fill: red;
-  stroke: red;
-}
-
-g[data-mml-node="merror"] > rect[data-background] {
-  fill: yellow;
-  stroke: none;
-}
-
-g[data-mml-node="mtable"] > line[data-line] {
-  stroke-width: 70px;
-  fill: none;
-}
-
-g[data-mml-node="mtable"] > rect[data-frame] {
-  stroke-width: 70px;
-  fill: none;
-}
-
-g[data-mml-node="mtable"] > .mjx-dashed {
-  stroke-dasharray: 140;
-}
-
-g[data-mml-node="mtable"] > .mjx-dotted {
-  stroke-linecap: round;
-  stroke-dasharray: 0,140;
-}
-
-g[data-mml-node="mtable"] > svg {
-  overflow: visible;
-}
-
-[jax="SVG"] mjx-tool {
-  display: inline-block;
-  position: relative;
-  width: 0;
-  height: 0;
-}
-
-[jax="SVG"] mjx-tool > mjx-tip {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-mjx-tool > mjx-tip {
-  display: inline-block;
-  padding: .2em;
-  border: 1px solid #888;
-  font-size: 70%;
-  background-color: #F8F8F8;
-  color: black;
-  box-shadow: 2px 2px 5px #AAAAAA;
-}
-
-g[data-mml-node="maction"][data-toggle] {
-  cursor: pointer;
-}
-
-mjx-status {
-  display: block;
-  position: fixed;
-  left: 1em;
-  bottom: 1em;
-  min-width: 25%;
-  padding: .2em .4em;
-  border: 1px solid #888;
-  font-size: 90%;
-  background-color: #F8F8F8;
-  color: black;
-}
-
-foreignObject[data-mjx-xml] {
-  font-family: initial;
-  line-height: normal;
-  overflow: visible;
-}
-
-.MathJax path {
-  stroke-width: 3;
-}
-
-mjx-container[display="true"] {
-  overflow: auto hidden;
-}
-
-mjx-container[display="true"] + br {
-  display: none;
-}
-</style>
+<meta name="generator" content="Hexo 5.4.2">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
 </head>
 
@@ -449,12 +339,12 @@ mjx-container[display="true"] + br {
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">零知识证明</h1>
+                    <h1 class="description center-align post-title">密码学03｜群和公钥加密</h1>
                 </div>
             </div>
         </div>
@@ -490,14 +380,14 @@ mjx-container[display="true"] + br {
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-03-01
+                    2023-03-25
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-03-02
+                    2023-03-26
                 </div>
                 
 
@@ -524,86 +414,130 @@ mjx-container[display="true"] + br {
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="零知识证明"><a href="#零知识证明" class="headerlink" title="零知识证明"></a>零知识证明</h1><blockquote>
-<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Gb411R7dr/?spm_id_from=333.337.search-card.all.click&amp;vd_source=1c8b4d276f629bbc2138253227fbb0a4">https://www.bilibili.com/video/BV1Gb411R7dr/?spm_id_from=333.337.search-card.all.click&amp;vd_source=1c8b4d276f629bbc2138253227fbb0a4</a></p>
-</blockquote>
-<h2 id="01-什么是零知识证明"><a href="#01-什么是零知识证明" class="headerlink" title="01 什么是零知识证明"></a>01 什么是零知识证明</h2><ul>
-<li><p>什么是“零知识”</p>
-<ul>
-<li>证明中信息的泄露：例如，n是否是合数</li>
-<li>不泄露额外信息的证明</li>
-</ul>
-</li>
-<li><p>零知识证明</p>
-<ul>
-<li>零知识证明允许一方（证明者）说服另一方（验证者）相信某个事实或声明，同时不泄露额外信息<ul>
-<li>Goldwasser, Micali与Rackoff提出（1980s）</li>
-<li>应用<ol>
-<li>身份识别协议</li>
-<li>数字签名</li>
-<li>加密</li>
-<li>区块链隐私保护，zcash</li>
-</ol>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>How to Explain Zero-Knowledge Protocols to Your Children</p>
-</li>
-</ul>
-<h2 id="交互式证明系统"><a href="#交互式证明系统" class="headerlink" title="交互式证明系统"></a>交互式证明系统</h2><ul>
-<li><p>交互图灵机（interactive Turing machine）</p>
-<ul>
-<li>一条只读输入带，一条工作带，一条随机带，一条只读通信带，一条只写通信带</li>
-<li>随机带：无限长随机比特序列（抛币）</li>
-</ul>
-</li>
-<li><p>交互协议（A，B）</p>
-<p><img src="/.io//$%7Bfiilename%7D/image-20230226201754718.png" alt="image-20230226201754718"></p>
-</li>
-<li><p>语言：集合L</p>
-<ul>
-<li>L中的元素：x可编码成01串，长度|x|<ul>
-<li>L可看作集合{0，1}*一个子集</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>成员的交互证明系统</p>
-<p>设L <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.09ex;" xmlns="http://www.w3.org/2000/svg" width="1.76ex" height="1.312ex" role="img" focusable="false" viewBox="0 -540 778 580"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2282" d="M84 250Q84 372 166 450T360 539Q361 539 370 539T395 539T430 540T475 540T524 540H679Q694 532 694 520Q694 511 681 501L522 500H470H441Q366 500 338 496T266 472Q244 461 224 446T179 404T139 337T124 250V245Q124 157 185 89Q244 25 328 7Q348 2 366 2T522 0H681Q694 -10 694 -20Q694 -32 679 -40H526Q510 -40 480 -40T434 -41Q350 -41 289 -25T172 45Q84 127 84 250Z"></path></g></g></g></svg></mjx-container> {0,1}* 是一个语言，（A,B）是一个交互协议。我们说（A,B）对L是一个成员的交互证明系统，如果它满足下列两个条件:</p>
-</li>
-</ul>
-<p>​    (1) 完备性：对每一个k &gt; 0和充分长的x ∈L，将x 作为（A,B）的输入，B终止协议并至少以1-|x|^-k^的概率接收x。这里的概率是相对于协议（A,B）所有可能的掷硬币而言的。</p>
-<p>​    (2)合理性：对每一个k &gt;0和充分长的x <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.486ex;" xmlns="http://www.w3.org/2000/svg" width="1.509ex" height="2.106ex" role="img" focusable="false" viewBox="0 -716 667 931"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2209" d="M196 25Q84 109 84 250Q84 372 166 450T360 539Q361 539 375 539T413 540T460 540L547 707Q550 716 563 716Q570 716 575 712T581 703T583 696T505 540H568Q583 532 583 520Q583 511 570 501L484 500L366 270H568Q583 262 583 250T568 230H346L247 38Q284 16 328 7Q355 1 466 0H570Q583 -10 583 -20Q583 -32 568 -40H471Q464 -40 447 -40T419 -41Q304 -41 228 3Q117 -211 115 -212Q111 -215 104 -215T92 -212T86 -204T84 -197Q84 -190 89 -183L196 25ZM214 61L301 230H124V228Q124 196 147 147T214 61ZM321 270L440 500Q353 499 329 494Q280 482 242 458T183 409T147 354T129 306T124 272V270H321Z"></path></g></g></g></svg></mjx-container> L，对任意的交互图灵机A’，将x作为（A’,B）的输入，B至多以|x|^-k^的概率接收x。这里的概率是相对于协议（A’,B）所有可能的掷硬币而言的。<img src="/.io//$%7Bfiilename%7D/image-20230226204116281.png" alt="image-20230226204116281"></p>
-<blockquote>
-<p>二次剩余：X^2^在数论中，特别在同余理论里，一个整数X对另一个整数p的<strong>二次剩余</strong>（英语：Quadratic residue）指X的平方除以p得到的余数。</p>
-<p>当存在某个X，式子</p>
-<script type="math/tex; mode=display">
-X^{2} \equiv d (mod p)</script><p>成立时，称<strong>“d是模p的二次剩余”</strong></p>
-<p>当对任意不成立时，称<strong>“ d是模 p的二次非剩余”</strong></p>
-</blockquote>
-<p>  <img src="/.io//$%7Bfiilename%7D/image-20230226204142021.png" alt="image-20230226204142021"></p>
-<p>  <img src="/.io//$%7Bfiilename%7D/image-20230226211740284.png" alt="image-20230226211740284"></p>
-<p>  <img src="/.io//$%7Bfiilename%7D/image-20230226211804883.png" alt="image-20230226211804883"></p>
-<p>  但是这个过程并不是零知识证明系统，因为泄露了额外的信息，在这个条件下，B可以利用A来判断一个数是不是二次剩余。</p>
-<p>  <img src="/.io//$%7Bfiilename%7D/image-20230226212126147.png" alt="image-20230226212126147"></p>
-<p>  <img src="/.io//$%7Bfiilename%7D/image-20230226212253217.png" alt="image-20230226212253217"></p>
-<p>  第三步，如果A知道的话，那么y一定属于二次剩余集合里面的一个数，|就是y如果是一个二次剩余的话，因为w也是剩余，无论i取多少，无论i=1时的yw，还是i取0时的w，都一定能算出他的平方根。但如果y不是二次剩余，当i取1的时候，就算不出平方根了。所以在这种情况下，如果说每一次，每一轮他都能发过来一个，并且这个B收到了以后，他自己算一下，确实是这个的平方根，那么就接受A的证明。</p>
-<p>  <img src="/.io//$%7Bfiilename%7D/image-20230226213832806.png" alt="image-20230226213832806"></p>
-<h1 id="如何证明零知识性"><a href="#如何证明零知识性" class="headerlink" title="如何证明零知识性"></a>如何证明零知识性</h1><p><img src="/.io//$%7Bfiilename%7D/image-20230227195333320.png" alt="image-20230227195333320"></p>
-<p>假设有个冒牌货，想冒充阿里巴巴，假设阿里巴巴洞穴出来的过程是一段录像，那么冒牌货虽然不知道协议（就是洞穴里的密码），但是他也有运气好的时候，有1/2的可能性能猜对，他可以通过剪辑的方法，把失败的剪辑去，生成一个和阿里巴巴相同的录像带，使得大家也以为他有。观众们看到这段视频和阿里巴巴的视频，并不能知道谁是真正知道咒语的阿里巴巴。这就能顾证明了阿里巴巴那个录像带并没有泄露任何知识。因为如果录像带泄露了知识，观众们就能够通过录像带里泄露的知识来区分谁是真正的阿里巴巴。</p>
-<p><img src="/.io//$%7Bfiilename%7D/image-20230227200433586.png" alt="image-20230227200433586"></p>
-<p><img src="/.io//$%7Bfiilename%7D/image-20230227200649476.png" alt="image-20230227200649476"></p>
-<p><img src="/.io//$%7Bfiilename%7D/image-20230227201029555.png" alt="image-20230227201029555"></p>
-<p>就像阿里巴巴里面的例子，如果我们弄一个冒牌货，他没有真正的咒语，但是他又能够模拟出一套录像带，使得观众无法区分这个没有知识的录像带和真正有知识的录像带。如果我们能做出一套假录像带，那么就能够证明真正的那套是没有泄露知识的。</p>
-<p><img src="/.io//$%7Bfiilename%7D/image-20230227201820577.png" alt="image-20230227201820577"></p>
-<p><img src="/.io//$%7Bfiilename%7D/image-20230227210200422.png" alt="image-20230227210200422"></p>
-<p><img src="/.io//$%7Bfiilename%7D/image-20230227210452105.png" alt="image-20230227210452105"></p>
-<h1 id="零知识证明的应用"><a href="#零知识证明的应用" class="headerlink" title="零知识证明的应用"></a>零知识证明的应用</h1><p><img src="/.io//$%7Bfiilename%7D/image-20230227210543479.png" alt="image-20230227210543479"></p>
-<p><img src="/.io//$%7Bfiilename%7D/image-20230227210751797.png" alt="image-20230227210751797"></p>
-<p><img src="/.io//$%7Bfiilename%7D/image-20230227211003877.png" alt="image-20230227211003877"></p>
-<p><img src="/.io//$%7Bfiilename%7D/image-20230227211130983.png" alt="image-20230227211130983"></p>
+                <h1 id="3-群与公钥加密"><a href="#3-群与公钥加密" class="headerlink" title="3 群与公钥加密"></a>3 群与公钥加密</h1><h2 id="3-1-群"><a href="#3-1-群" class="headerlink" title="3.1 群"></a>3.1 群</h2><p><strong>符号说明：</strong> a^b是指a的b次方；a_1 下划线表示下标；a*b是指a乘以b。</p>
+<p>介绍公钥密码算法之前先要介绍一个关键的数学工具：<strong>群</strong>。</p>
+<p><strong>群定义：</strong> 一个<strong>集合G</strong> ，满足以下6个条件，则称为群。</p>
+<p><strong>1.</strong> <strong>非空集：</strong> 集合中至少有一个元素。</p>
+<p><strong>2.</strong> <strong>二元运算：</strong> 集合中的元素能够进行一种运算，例如<strong>加法</strong>运算、或<strong>乘法</strong>运算。</p>
+<p><strong>3.</strong> <strong>封闭性：</strong> 集合中的元素进行运算后，得到的结果仍然是集合中的元素。</p>
+<p><strong>4.</strong> <strong>结合律：</strong> 任意a,b,c属于G，则(a+b)+c=a+(b+c)。</p>
+<p><strong>5.</strong> <strong>单位元e</strong> <strong>：</strong> 加法情况下a+e=e+a=a，乘法情况下：a<em>e=e</em>a=a。</p>
+<p><strong>6.</strong> <strong>每个元素</strong> <strong>都有逆元a^(-1)</strong> ：加法情况下a+ a^(-1)= a^(-1)+a=e，乘法情况下：a<em>a^(-1)= a^(-1)</em>a=e。</p>
+<p>因此集合G称为群。</p>
+<p>对群的概念可以简单理解为：<strong>具有封闭运算的集合称为群。</strong></p>
+<p><strong>举例：</strong> {0,1}集合，除法，则不满足封闭性。1除以0等于无穷大。</p>
+<p>这个概念有点复杂，有6个性质，主要用到二元运算、封闭性、单位元、<strong>逆元</strong>这四个性质。</p>
+<p>而非空集和结合律很容易满足。</p>
+<p><strong>概念1</strong> <strong>：</strong> 如果一个群元素能够通过有限次<strong>本身运算</strong>，表达出群内其他所有元素，则称为群的<strong>生成元</strong>。<strong>生成元：</strong>理解为用一个元素表达其他所有元素；例如：椭圆曲线上的离散对数点，是一个群。生成元G。</p>
+<p><strong>概念2</strong> <strong>：</strong> 群内元素个数称为群的<strong>阶</strong>。<br><strong>例1</strong> <strong>：</strong> 集合{0,1,2,3,4,5,6}模系数为7，就是一个<strong>加法群</strong>。</p>
+<p><strong>1.</strong> <strong>非空集：</strong> 群内有7个元素。</p>
+<p><strong>2.</strong> <strong>二元运算:</strong> 加法。</p>
+<p><strong>3.</strong> <strong>封闭性：</strong> 群内任意两个元素相加后模7后仍然是群中的元素，例如(5+6)mod7=4；</p>
+<p><strong>4.</strong> <strong>结合律：</strong> ((3+4)+5) mod7=(3+(4+5)) mod7=5，结果相同。</p>
+<p><strong>5.</strong> <strong>单位元为e=0</strong> <strong>：</strong> 3+0=0+3=3。</p>
+<p><strong>6.</strong> <strong>逆元：</strong> 1的逆元为6，因为(1+6)mod7=e，2的逆元为5，因为(2+5)mod7=e，同理3的逆元为4。0的逆元是0。</p>
+<p>因此集合{0,1,2,3,4,5,6}模系数为7就是一个<strong>群</strong>。<br><strong>7</strong> <strong>是素数，这个素数群的性质特别好。因为素数7</strong> <strong>与群元素i</strong> <strong>是互素的，所以每个非零元素都是群的*生成元*。</strong> 例如：群元素2能够通过有限次运算，表达其他所有元素：</p>
+<p>(2+2)mod7=4则表达群元素4，</p>
+<p>(2+2+2)mod7=6则表达群元素6，</p>
+<p>(2+2+2+2)mod7=1则表达群元素1，</p>
+<p>(2+2+2+2+2)mod7=3则表达群元素3，</p>
+<p>(2+2+2+2+2+2)mod7=5则表达群元素5，</p>
+<p>(2+2+2+2+2+2+2)mod7=0则表达群元素0。</p>
+<p>群元素3能够通过有限次运算，表达其他所有元素：</p>
+<p>(3)mod7=3</p>
+<p>(3+3)mod7=6</p>
+<p>(3+3+3)mod7=2</p>
+<p>(3+3+3+3)mod7=5</p>
+<p>(3+3+3+3+3)mod7=1</p>
+<p>(3+3+3+3+3+3)mod7=4</p>
+<p>(3+3+3+3+3+3+3)mod7=0</p>
+<p>群元素4能够通过有限次运算，表达其他所有元素：</p>
+<p>(4)mod7=4</p>
+<p>(4+4)mod7=1</p>
+<p>(4+4+4)mod7=5</p>
+<p>(4+4+4+4)mod7=2</p>
+<p>(4+4+4+4+4)mod7=6</p>
+<p>(4+4+4+4+4+4)mod7=3</p>
+<p>(4+4+4+4+4+4+4)mod7=0</p>
+<p>群元素5能够通过有限次运算，表达其他所有元素：</p>
+<p>(5)mod7=5</p>
+<p>(5+5)mod7=3</p>
+<p>(5+5+5)mod7=1</p>
+<p>(5+5+5+5)mod7=6</p>
+<p>(5+5+5+5+5)mod7=4</p>
+<p>(5+5+5+5+5+5)mod7=2</p>
+<p>(5+5+5+5+5+5+5)mod7=0</p>
+<p>群元素6能够通过有限次运算，表达其他所有元素：</p>
+<p>(6)mod7=6</p>
+<p>(6+6)mod7=5</p>
+<p>(6+6+6)mod7=4</p>
+<p>(6+6+6+6)mod7=3</p>
+<p>(6+6+6+6+6)mod7=2</p>
+<p>(6+6+6+6+6+6)mod7=1</p>
+<p>(6+6+6+6+6+6+6)mod7=0</p>
+<p><strong>群元素1,2,3,4,5,6</strong> <strong>均可以通过有限次运算表达其他群元素。</strong></p>
+<p><strong>例2</strong> <strong>：</strong> 集合{1,2,3,4,5,6}模系数为7，就是一个<strong>乘法群</strong>。</p>
+<p><strong>1.</strong> <strong>非空集：</strong> 群内有6个元素。</p>
+<p><strong>2.</strong> <strong>二元运算:</strong> <strong>乘法</strong> 。</p>
+<p><strong>3.</strong> <strong>封闭性：</strong> 群内任意两个元素相乘后模7后仍然是群中的元素，例如(5*6)mod7=2；</p>
+<p><strong>4.</strong> <strong>结合律：</strong> ((3<em>4) \</em>5) mod7=(3* (4*5)) mod7=4，结果相同。</p>
+<p><strong>5.</strong> <strong>单位元为1</strong> <strong>：</strong> 1乘以任意元素等于任意元素;3<em>1=1</em>3=3。</p>
+<p><strong>6.</strong> <strong>逆元：</strong> 1的逆元为1，因为(1<em>1)mod7=1;2的逆元为4，因为(2</em>4)mod7=e=1; 3的逆元为5，因为(3<em>5)mod7=1。6的逆元为6，因为(6</em>6)mod7=1。</p>
+<p>因此集合{1,2,3,4,5,6}模系数为7就是一个<strong>乘法群</strong>。</p>
+<p>(2)mod7=2</p>
+<p>(2*2)mod7=4</p>
+<p>(2<em>2</em>2)mod7=1</p>
+<p>(2<em>2</em>2*2)mod7=2</p>
+<p>(2<em>2</em>2<em>2</em>2)mod7=4</p>
+<p>(2<em>2</em>2<em>2</em>2*2)mod7=1</p>
+<p>(2<em>2</em>2<em>2</em>2<em>2</em>2)mod7=2</p>
+<p><strong>只能表达1,2,4</strong> <strong>因此2不是生成元</strong><br>(3)mod7=3，记为31mod7=3</p>
+<p>(3*3)mod7=2，记为32mod7=2</p>
+<p>(3<em>3</em>3)mod7=6，记为33mod7=6</p>
+<p>(3<em>3</em>3*3)mod7=4，记为34mod7=4</p>
+<p>(3<em>3</em>3<em>3</em>3)mod7=5，记为35mod7=5</p>
+<p>(3<em>3</em>3<em>3</em>3*3)mod7=1，记为36mod7=1</p>
+<p><strong>所以3</strong> <strong>是生成元</strong></p>
+<p><strong>举例：公钥为6</strong> <strong>，生成元是3</strong> <strong>；如何计算私钥？</strong></p>
+<p><strong>已知公钥计算私钥，需要暴力搜索，短时间内不可行，需要指数时间。</strong></p>
+<p><strong>已知私钥，计算公钥，多项式时间内可计算；</strong></p>
+<p><strong>离散对数困难问题：</strong><br>私钥sk=x,公钥pk=X，其中X=gx,PK=gX=gsk。已知g，X，不能在多项式时间内计算出x。</p>
+<pre class="line-numbers language-none"><code class="language-none">(3*3*3*3*3)mod7=5，记为3&lt;sup&gt;5&lt;/sup&gt;mod7=5<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="3-2-Diffie-Hellman密钥交换"><a href="#3-2-Diffie-Hellman密钥交换" class="headerlink" title="3.2 Diffie-Hellman密钥交换"></a>3.2 Diffie-Hellman密钥交换</h2><p>Alice私钥SK1= α，公钥PK1=gα；</p>
+<p>Bob私钥SK2=β，公钥PK2=gβ;</p>
+<p><strong>协议：</strong> Alice发送其公钥给Bob；</p>
+<p>Bob发送其公钥给Alice。</p>
+<p>则Alice如下计算（PK2）SK1=(gβ)α=gαβ；Bob如下计算(PK1）SK2=(gα)β=gαβ公共密钥。</p>
+<p>因此Alice与Bob计算出相同的<strong>公共密钥</strong>Key=gαβ，或Key=Hash(gαβ)</p>
+<p><img src="/.io//0deec089a19bea414b406ec184c4126257ede0f9.png" alt="1"></p>
+<p>用会话密钥使用对称加密算法，对数据加密和解密<br><strong>举例：</strong> 素数群，生成元，乘法群。<br>Alice私钥SK1= α=4,公钥PK1=gα=24mod11=5;<br>Bob私钥SK2= β=5,公钥PK2=gβ=25mod11=10;<br><strong>协议：</strong> Alice发送其公钥PK1=5给Bob；Bob发送其公钥PK2=10给Alice。<br>则Alice如下计算(PK2)SK1=104mod11=1；Bob如下计算<br>(PK1)SK2=55mod11=1<br><strong>等价于</strong> Alice，计算Key=(25)4mod11=1，Bob计算(24)5mod11=1</p>
+<p>因此Alice与Bob计算出相同的<strong>会话密钥</strong>Key=gαβ=24<em>5=1，<br>或Key=Hash(gαβ)=SHA256(24x5mod11) =SHA 256(1)<br><strong>但是，有</strong> <strong>2</strong> <em>*个缺点：</em></em></p>
+<p><strong>缺点</strong> <strong>1</strong> <strong>：公共密钥永远没变化</strong></p>
+<p><strong>改进：添加公开随机数r</strong><br><strong>协议：</strong> Alice发送其公钥PK1和公开随机数r1给Bob；Bob发送其公钥PK2和公开随机数r2给Alice<br>则Alice计算如下（PK2）SK1=(gβ)α=gαβ，令Key=Hash（gαβ，r1，r2）<br>Bob计算如下(PK1）SK2=(gα)β=gαβ，令Key=Hash（gαβ，r1，r2）<br><strong>因此</strong> <strong>Alice</strong> <strong>与</strong> <strong>Bob</strong> <strong>计算出相同的会话密钥</strong> <strong>。会话密钥每次都会发生变化！！！</strong></p>
+<p><strong>第一天：</strong> <strong>m1</strong>， r1=100，r2=100</p>
+<p><strong>第一天：</strong> <strong>m1</strong>，r1=200，r2=200</p>
+<p><strong>缺点</strong> <strong>2</strong> <strong>：中间人攻击</strong><br>Adversary私钥SKA=ω，公钥PKA=gω<br><strong>理想情况</strong>：Alice发送其公钥PK1给Bob；Bob发送其公钥PK2给Alice；</p>
+<p><img src="/.io//fe5a4ae6b63903fa2db18739194f240b7fce2405.png" alt="2"></p>
+<p><strong>实际情况：</strong> Alice发送其公钥PK1给Adversary，Adversary发送其公钥PKA给Bob。<br>Bob发送其公钥PK2给Adversary，Adversary发送其公钥PKA给Alice</p>
+<p>则Alice计算出与Adversary的会话密钥<br><img src="/.io//89cb0da83f6f06a9b2d4e865ac00e0e9d913c807.png" alt="3"><br>Adversary计算出与Alice的会话密钥<br><img src="/.io//765bf85e807b3f9f676774cab8db04b7e3844da5.png" alt="4"><br>则Bob计算出与Adversary的会话密钥<br><img src="/.io//2b5d049b3011acb6bd5206dced7c60739221cb23.png" alt="5"><br>Adversary计算出与Bob的会话密钥<br><img src="/.io//b21fbc1465087bab53f551ed19bd7e0bf725b917.png" alt="6"><br><strong>添加随机数不能解决中间人攻击</strong><br><img src="/.io//2a247752ade8a977c009d2626cd51e795c05cd54.png" alt="7"></p>
+<h2 id="3-3-ElGamal加密"><a href="#3-3-ElGamal加密" class="headerlink" title="3.3 ElGamal加密"></a>3.3 ElGamal加密</h2><p><img src="/.io//e61f410824dadaec5a6aad09fea2229ac76b3095.png" alt="8"></p>
+<h2 id="3-4-椭圆曲线群"><a href="#3-4-椭圆曲线群" class="headerlink" title="3.4 椭圆曲线群"></a>3.4 椭圆曲线群</h2><p><img src="/.io//84fa8ecbddf7febe3fa82c06d7cc3b3a94896ff6.png" alt="9"></p>
+<p><img src="/.io//c4b07143501154ec77d51295f7dbba39d0d5aa88_2_417x500.png" alt="10"></p>
+<p><img src="/.io//9f19af436dffef70ec1b99d69d2011f2d3493f80_2_341x500.png" alt="11"></p>
+<p><img src="/.io//5196a0fd4e2617833d0cd72f9c4f515a66b63259_2_423x500.png" alt="12"></p>
+<h2 id="3-5-零知识证明"><a href="#3-5-零知识证明" class="headerlink" title="3.5 零知识证明"></a>3.5 零知识证明</h2><p><img src="/.io//8d1f44dbffad09ab901e6d4b531191dc11a0e5a0_2_382x499.png" alt="13"></p>
+<p><img src="/.io//bc3bc57b77e4a52d121469e0c7ec2dd4b560661b_2_371x500.png" alt="14"></p>
+<p><img src="/.io//c2b8046c859512a09b0c15b56b941c420a9a18cc.png" alt="15"></p>
+<h2 id="3-6-ElGamal同态加密"><a href="#3-6-ElGamal同态加密" class="headerlink" title="3.6 ElGamal同态加密"></a>3.6 ElGamal同态加密</h2><h3 id="3-6-1-密文同态运算原理"><a href="#3-6-1-密文同态运算原理" class="headerlink" title="3.6.1 密文同态运算原理"></a>3.6.1 密文同态运算原理</h3><p><img src="/.io//a833f95dd7868972c66826331881da3f73d7c86f.png" alt="16"></p>
+<p><img src="/.io//6b3fb7147adc8a9c0390899738a3ce3e2f5ac03c.png" alt="17"></p>
+<p><img src="/.io//610fa41278cf5b1b0bec3475ac68796a5a4882db.png" alt="18"></p>
+<h3 id="3-6-2-Sigma证明2个值相等"><a href="#3-6-2-Sigma证明2个值相等" class="headerlink" title="3.6.2 Sigma证明2个值相等"></a>3.6.2 Sigma证明2个值相等</h3><p><img src="/.io//67273270b3b761a572fdd0003fc0cd80530f434d.png" alt="19"></p>
+<p><img src="/.io//9efa616c7dc14183fb3166b4e7d4bc6b64537c06.png" alt="20"></p>
+<p><img src="/.io//054c48dff59aaf310b4cbdba83366e10b4643218.png" alt="21"></p>
+<p><img src="/.io//42c579fef6d50fb85c4f15c8aa9bff1261870a39.png" alt="22"></p>
+<h2 id="3-7-ElGamal-加密安全升级"><a href="#3-7-ElGamal-加密安全升级" class="headerlink" title="3.7 ElGamal 加密安全升级"></a>3.7 ElGamal 加密安全升级</h2><p><img src="/.io//b06b20873145394d26178ea8a7568a88c6801c65.png" alt="23"></p>
+<h2 id="3-8-ECIES加密"><a href="#3-8-ECIES加密" class="headerlink" title="3.8 ECIES加密"></a>3.8 ECIES加密</h2><p><img src="/.io//d315a6bbdf6f60bf76cdcd887321083caf55fe9e.png" alt="24"></p>
+<p><img src="/.io//2eb8d988cdf718a5b24162b8e39408f74f53b9c2_2_393x500.png" alt="25"></p>
 
                 
             </div>
@@ -620,7 +554,7 @@ X^{2} \equiv d (mod p)</script><p>成立时，称<strong>“d是模p的二次剩
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">Luc1ferlux</a>
+                    <a href="/about" rel="external nofollow noreferrer">luc1ferlux</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -630,7 +564,7 @@ X^{2} \equiv d (mod p)</script><p>成立时，称<strong>“d是模p的二次剩
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://luc1ferlux.github.io/2023/03/01/ling-zhi-shi-zheng-ming/">https://luc1ferlux.github.io/2023/03/01/ling-zhi-shi-zheng-ming/</a>
+                    <a href="https://luc1ferlux.github.io/2023/03/25/test/">https://luc1ferlux.github.io/2023/03/25/test/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -643,7 +577,7 @@ X^{2} \equiv d (mod p)</script><p>成立时，称<strong>“d是模p的二次剩
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">Luc1ferlux</a>
+                    <a href="/about" target="_blank">luc1ferlux</a>
                     !
                 </span>
             </div>
@@ -748,6 +682,43 @@ X^{2} \equiv d (mod p)</script><p>成立时，称<strong>“d是模p的二次剩
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
+                <a href="/2023/03/25/hvv/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="hvv">
+                        
+                        <span class="card-title">hvv</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Here's something encrypted, password is required to continue reading.
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-03-25
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Lucifer
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
                 <a href="/2023/03/06/dui-cheng-jia-mi-suan-fa-des-aes/">
                     <div class="card-image">
                         
@@ -764,9 +735,9 @@ X^{2} \equiv d (mod p)</script><p>成立时，称<strong>“d是模p的二次剩
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-03-06
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-03-06
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -786,43 +757,6 @@ X^{2} \equiv d (mod p)</script><p>成立时，称<strong>“d是模p的二次剩
                         <span class="chip bg-color">密码学</span>
                     </a>
                     
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2023/01/02/article-title/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="article title">
-                        
-                        <span class="card-title">article title</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-01-02
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            Lucifer
-                            
-                        </span>
-                    </div>
                 </div>
                 
             </div>
@@ -944,13 +878,6 @@ X^{2} \equiv d (mod p)</script><p>成立时，称<strong>“d是模p的二次剩
 
 </main>
 
-
-<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script>
-    MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
-    });
-</script>
 
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 
